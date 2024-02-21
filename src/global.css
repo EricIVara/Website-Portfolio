@@ -1,0 +1,81 @@
+/* src/global.css */
+
+/* Global styles */
+body {
+  font-family: 'Open Sans', sans-serif; /* This applies the font to your entire website */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; /* Aligns all items to the center */
+  align-items: center;
+  padding: 0 40px;
+  background-color: #000;
+  color: white;
+}
+
+/* This will position the navbar items on the left */
+.nav-items-left {
+  position: absolute;
+  left: 40px; /* Same as the padding of the navbar to align with the title */
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+/* This will position the navbar items on the right */
+.nav-items-right {
+  position: absolute;
+  right: 40px; /* Same as the padding of the navbar to align with the title */
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-items-left a,
+.nav-items-right a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+  font-size: 1em; /* Adjust the font size if necessary */
+}
+
+.nav-items-left a:hover,
+.nav-items-right a:hover {
+  color: #aaa;
+}
+
+.nav-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  /* No need to set margin-right: auto; as justify-content: center; is used */
+}
+
+.nav-items-right a {
+  font-size: 1.2em;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .nav-items-left,
+  .nav-items-right {
+    position: static; /* Resets the position for mobile devices */
+    display: block; /* Stacks the items */
+    width: 100%; /* Full width */
+    justify-content: center; /* Centers the items */
+  }
+
+  .nav-title {
+    font-size: 1.2em;
+    /* Center the title on mobile screens */
+    position: static; /* Reset position for mobile */
+    display: block; /* Ensure the title is on its own line */
+    width: 100%; /* Full width */
+    text-align: center; /* Center the text */
+  }
+}
