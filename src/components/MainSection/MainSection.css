@@ -1,0 +1,48 @@
+/* src/components/MainSection/MainSection.css */
+
+.main-section {
+  position: relative;
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden; /* Prevents scroll */
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none; /* Disables clicking on the video */
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Color of the text */
+  text-align: center; /* Aligns text to the center */
+  z-index: 2; /* Above the video */
+}
+
+.overlay-content h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.overlay-content p {
+  font-size: 1.25rem;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* Add more styling as needed */
